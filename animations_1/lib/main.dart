@@ -64,46 +64,21 @@ class _RadarBeamState extends State<RadarBeam>
         builder: (_, __) {
           return RotationTransition(
             turns: animationController,
-            child: ClipPath(
-              clipper: BeamClipper(),
-              child: Container(
-                height: 2000,
-                width: 200,
-                decoration: BoxDecoration(
-                  gradient: SweepGradient(
-                    colors: [
-                      const Color.fromARGB(255, 42, 216, 48),
-                      Colors.green.withOpacity(0.1),
-                      Colors.transparent
-                    ],
-                    startAngle: 0.25,
-                    endAngle: 2.5,
-                    stops: const [0.5, 0.6, 1],
-                  ),
+            child: Container(
+              decoration: const BoxDecoration(
+                gradient: SweepGradient(
+                  center: FractionalOffset.center,
+                  colors: [
+                    Colors.transparent,
+                    Color(0xFF34A853),
+                    Colors.transparent
+                  ],
+                  stops: [0.2, 0.25, 0.2],
                 ),
               ),
             ),
           );
         });
-  }
-}
-
-class BeamClipper extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    Path path = Path()
-      ..lineTo(size.width / 2, size.height / 2)
-      ..lineTo(size.width, size.height)
-      ..lineTo(0, size.height)
-      ..lineTo(size.width / 2, size.height / 2)
-      ..close();
-
-    return path;
-  }
-
-  @override
-  bool shouldReclip(covariant CustomClipper oldClipper) {
-    return false;
   }
 }
 
