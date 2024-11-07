@@ -59,26 +59,21 @@ class _RadarBeamState extends State<RadarBeam>
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-        animation: animationController,
-        builder: (_, __) {
-          return RotationTransition(
-            turns: animationController,
-            child: Container(
-              decoration: const BoxDecoration(
-                gradient: SweepGradient(
-                  center: FractionalOffset.center,
-                  colors: [
-                    Colors.transparent,
-                    Color(0xFF34A853),
-                    Colors.transparent
-                  ],
-                  stops: [0.2, 0.25, 0.2],
-                ),
-              ),
-            ),
-          );
-        });
+    return RotationTransition(
+      turns: animationController,
+      child: Container(
+        decoration: const BoxDecoration(
+          gradient: SweepGradient(
+            colors: [
+              Colors.transparent,
+              Color(0xFF34A853),
+              Colors.transparent
+            ],
+            stops: [0.2, 0.25, 0.25],
+          ),
+        ),
+      ),
+    );
   }
 }
 
