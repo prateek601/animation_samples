@@ -26,12 +26,13 @@ class MainApp extends StatelessWidget {
   ];
 
   final imageChildren = [
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < 4; i++)
       SizedBox(
-          height: 200,
-          width: 155,
-          child: Image.network(
-              "https://picsum.photos/150/200?rnd=${Random().nextInt(100)}"))
+        height: 200,
+        width: 155,
+        child: Image.network(
+            "https://picsum.photos/150/200?rnd=${Random().nextInt(100)}"),
+      )
   ];
 
   @override
@@ -52,9 +53,9 @@ class MainApp extends StatelessWidget {
               height: 10,
             ),
             EndlessScrollingWidget(
-              children: imageChildren,
-              childrenWidth: 435,
-              scrollDuration: Duration(seconds: 20),
+              children: [...imageChildren, ...imageChildren],
+              childrenWidth: 4 * 155,
+              scrollDuration: Duration(seconds: 15),
             ),
           ],
         )),
