@@ -40,7 +40,7 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
                   height: 350,
                   width: 230,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
                         image: NetworkImage(
                           "https://images.pexels.com/photos/27951997/pexels-photo-27951997/free-photo-of-a-laptop-on-a-table-with-a-vase-of-flowers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -60,7 +60,7 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
                         height: 350,
                         width: 230,
                         child: Padding(
-                          padding: const EdgeInsets.all(12.0),
+                          padding: const EdgeInsets.all(20.0),
                           child: Column(
                             children: [
                               Text(
@@ -74,6 +74,16 @@ class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
                           ),
                         ),
                       ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 230,
+                  height: 350,
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.white, width: 8),
+                      borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
