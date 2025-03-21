@@ -4,82 +4,20 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+    
         {
-            "name": "card_hover_animation",
-            "cwd": "card_hover_animation",
+            "name": "animation_samples",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "card_hover_animation (profile mode)",
-            "cwd": "card_hover_animation",
+            "name": "animation_samples (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "card_hover_animation (release mode)",
-            "cwd": "card_hover_animation",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "endless_scrolling_tutorial",
-            "cwd": "endless_scrolling_tutorial",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "endless_scrolling_tutorial (profile mode)",
-            "cwd": "endless_scrolling_tutorial",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "endless_scrolling_tutorial (release mode)",
-            "cwd": "endless_scrolling_tutorial",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "github_card_animation",
-            "cwd": "github_card_animation",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "github_card_animation (profile mode)",
-            "cwd": "github_card_animation",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "github_card_animation (release mode)",
-            "cwd": "github_card_animation",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "radar_animation",
-            "cwd": "radar_animation",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "radar_animation (profile mode)",
-            "cwd": "radar_animation",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "radar_animation (release mode)",
-            "cwd": "radar_animation",
+            "name": "animation_samples (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
