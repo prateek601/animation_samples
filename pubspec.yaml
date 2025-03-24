@@ -9,6 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cached_network_image: ^3.3.1
+  cupertino_icons: ^1.0.6
+  fluttericon: ^2.0.0
+  google_fonts: ^5.1.0
+
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +22,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+  - assets/img/samples/
+  - assets/img/vice/
