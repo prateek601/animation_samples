@@ -1,3 +1,4 @@
+import 'package:animation_samples/projects/vice_slide_animations/features/home/presentation/widgets/infinite_draggable_slider.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/core.dart';
@@ -74,10 +75,15 @@ class _ViceScreenState extends State<ViceScreen> with TickerProviderStateMixin {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: 12),
-              Spacer(),
-              // TODO: InfiniteDraggableSlider
-              SizedBox(height: 52),
+              SizedBox(height: 24),
+              Expanded(
+                child: InfiniteDraggableSlider(
+                  itemCount: Magazine.fakeMagazinesValues.length,
+                  itemBuilder: (context, index) =>
+                      Magazine.fakeMagazinesValues[index],
+                ),
+              ),
+              SizedBox(height: 72),
               SizedBox(
                 height: 140,
                 child: AllEditionsListView(magazines: magazines),
