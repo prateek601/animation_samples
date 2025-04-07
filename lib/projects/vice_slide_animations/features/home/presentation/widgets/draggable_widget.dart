@@ -133,6 +133,7 @@ class _DraggableWidgetState extends State<DraggableWidget>
     );
     if (!widget.isEnableDrag) return child;
     return GestureDetector(
+      onTap: widget.onPressed,
       onPanStart: onPanStart,
       onPanUpdate: onPanUpdate,
       onPanEnd: onPanEnd,

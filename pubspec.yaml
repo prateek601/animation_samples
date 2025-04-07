@@ -13,6 +13,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   fluttericon: ^2.0.0
   google_fonts: ^5.1.0
+  ui_common:
+    git: https://github.com/brocodev/ui_common.git
 
 
 dev_dependencies:
@@ -25,3 +27,4 @@ flutter:
   assets:
   - assets/img/samples/
   - assets/img/vice/
+  - assets/images/

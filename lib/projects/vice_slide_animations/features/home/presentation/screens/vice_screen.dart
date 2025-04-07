@@ -78,6 +78,7 @@ class _ViceScreenState extends State<ViceScreen> with TickerProviderStateMixin {
               SizedBox(height: 24),
               Expanded(
                 child: InfiniteDraggableSlider(
+                  onTapItem: (index) => openMagazineDetail(context, index),
                   itemCount: Magazine.fakeMagazinesValues.length,
                   itemBuilder: (context, index) =>
                       Magazine.fakeMagazinesValues[index],

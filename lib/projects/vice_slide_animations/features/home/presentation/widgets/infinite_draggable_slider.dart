@@ -11,11 +11,13 @@ class InfiniteDraggableSlider extends StatefulWidget {
     required this.itemBuilder,
     required this.itemCount,
     this.index = 0,
+    this.onTapItem,
   });
 
   final Function(BuildContext context, int index) itemBuilder;
   final int itemCount;
   final int index;
+  final ValueChanged<int>? onTapItem;
 
   @override
   State<InfiniteDraggableSlider> createState() =>
@@ -111,6 +113,7 @@ class _InfiniteDraggableSliderState extends State<InfiniteDraggableSlider>
                   child: Transform.rotate(
                     angle: getAngle(stackIndex),
                     child: DraggableWidget(
+                      onPressed: () => widget.onTapItem?.call(modIndex),
                       onSlideOut: onSlideOut,
                       isEnableDrag: stackIndex == 3,
                       child: MagazineCoverImage(

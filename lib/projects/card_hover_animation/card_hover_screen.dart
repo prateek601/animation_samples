@@ -21,7 +21,6 @@ class _CardHoverScreenState extends State<CardHoverScreen>
         body: Center(
           child: MouseRegion(
             onEnter: (_) {
-              print("hover");
               setState(() {
                 isHovering = true;
               });

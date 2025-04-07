@@ -18,4 +18,9 @@ List<Project> projects = [
       title: "Vice Slide Animation",
       description: "Stunning slide animations",
       route: RouteName.viceSlideAnimation),
+  Project(
+      title: "Smart Home Animation",
+      description:
+          "Parallax effect, implicit animation and custom hero transition",
+      route: RouteName.smartHomeAnimation),
 ];
