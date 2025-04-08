@@ -17,6 +17,28 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final controller = PageController(viewportFraction: 0.8);
 
+  final ValueNotifier<double> pageNotifier = ValueNotifier(0);
+  final ValueNotifier<int> roomSelectorNotifier = ValueNotifier(-1);
+
+  @override
+  void initState() {
+    controller.addListener(pageListener);
+    super.initState();
+  }
+
+  void pageListener() {
+    pageNotifier.value = controller.page!;
+  }
+
+  @override
+  void dispose() {
+    controller
+      ..removeListener(pageListener)
+      ..dispose();
+    pageNotifier.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return LightedBackgound(
@@ -34,13 +56,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   fit: StackFit.expand,
                   clipBehavior: Clip.none,
                   children: [
-                    SmartRoomsPageView(controller: controller),
-                    const Positioned.fill(
+                    SmartRoomsPageView(
+                      controller: controller,
+                      pageNotifier: pageNotifier,
+                      roomSelectorNotifier: roomSelectorNotifier,
+                    ),
+                    Positioned.fill(
                       top: null,
                       child: Column(
                         children: [
-                          PageIndicators(),
-                          SmHomeBottomNavigationBar(),
+                          PageIndicators(
+                            selectedRoomNotifier: roomSelectorNotifier,
+                          ),
+                          SmHomeBottomNavigationBar(
+                            selectedRoomNotifier: roomSelectorNotifier,
+                          ),
                         ],
                       ),
                     ),

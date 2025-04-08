@@ -19,6 +19,13 @@ class _ShimmerArrowsState extends State<ShimmerArrows>
       ..repeat(min: -0.5, max: 1.5, period: const Duration(seconds: 1));
     super.initState();
   }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
